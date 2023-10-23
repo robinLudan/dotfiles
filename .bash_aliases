@@ -45,7 +45,8 @@ alias nblade='php artisan breeze:install blade'
 alias nrd='npm run dev'
 # create livewire.php in config and change layouts path
 alias palp='php artisan livewire:publish --config'
-
+#notification
+alias pamn='php artisan make:notification'
 #git related
 alias gs='git status'
 alias ga='git add'
