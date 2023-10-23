@@ -163,3 +163,7 @@ super + shift + w
 # lockscreen 
 super + e
 	i3lock -fnc 000000	
+
+#xrandr 
+XF86Display
+    arandr
