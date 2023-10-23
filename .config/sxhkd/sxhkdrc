@@ -161,9 +161,5 @@ ctrl + alt + m
 super + shift + w
 	librewolf
 # lockscreen 
-super + e
+super + x
 	i3lock -fnc 000000	
-
-#xrandr 
-XF86Display
-    arandr
