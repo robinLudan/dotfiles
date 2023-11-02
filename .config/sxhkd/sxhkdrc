@@ -155,7 +155,7 @@ XF86Bluetooth
     systemctl stop bluetooth && systemctl disable bluetooth
 
 # launch meta trader 5
-ctrl + alt + m
+super + shift + m
 	wine '/home/rob/.wine/drive_c/Program Files/MetaTrader 5/terminal64.exe'
 # launch browser
 super + shift + w
@@ -163,3 +163,9 @@ super + shift + w
 # lockscreen 
 super + x
 	i3lock -fnc 000000	
+
+# taking a screenshot
+Print
+    scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/screenshots && mv $f ~/screenshots && xclip -selection clipboard -t image/png -i ~/screenshots/`ls -1 -t ~/screenshots | head -1`'
+shift + Print
+    scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/screenshots && mv $f ~/screenshots && xclip -selection clipboard -t image/png -i ~/screenshots/`ls -1 -t ~/screenshots | head -1`'
