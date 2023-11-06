@@ -48,6 +48,9 @@
 (toolbox-wilber no)
 (toolbox-group-menu-mode click)
 (icon-theme "Color")
+(layer-new-name "colors")
+(layer-add-mask-type selection)
+(layer-add-mask-invert yes)
 (selection-border-radius 2)
 (fill-options
     (style solid)

@@ -1,6 +1,36 @@
 # settings
 
-(GimpColorBalanceConfig "2020-06-16 14:22:39"
+(GimpColorBalanceConfig "2023-11-06 19:50:40"
+    (time 1699293040)
+    (range shadows)
+    (cyan-red 0)
+    (magenta-green 0)
+    (yellow-blue 0)
+    (range midtones)
+    (cyan-red 0)
+    (magenta-green 0)
+    (yellow-blue 0)
+    (range highlights)
+    (cyan-red 0)
+    (magenta-green 0)
+    (yellow-blue 0)
+    (preserve-luminosity yes))
+(GimpColorBalanceConfig "2023-11-06 19:50:18"
+    (time 1699293018)
+    (range shadows)
+    (cyan-red 0.14000000000000001)
+    (magenta-green 0.013999999999999999)
+    (yellow-blue 0.040999999999999995)
+    (range midtones)
+    (cyan-red -0.023)
+    (magenta-green -0.040999999999999995)
+    (yellow-blue 0.050000000000000003)
+    (range highlights)
+    (cyan-red 0)
+    (magenta-green 0)
+    (yellow-blue 0)
+    (preserve-luminosity yes))
+(GimpColorBalanceConfig "2020-06-16 20:22:39"
     (time 1592328159)
     (range shadows)
     (cyan-red 0)
@@ -15,7 +45,7 @@
     (magenta-green 0)
     (yellow-blue 0)
     (preserve-luminosity yes))
-(GimpColorBalanceConfig "2020-06-16 12:19:55"
+(GimpColorBalanceConfig "2020-06-16 18:19:55"
     (time 1592320795)
     (range shadows)
     (cyan-red 0)
@@ -30,7 +60,7 @@
     (magenta-green 0)
     (yellow-blue 0)
     (preserve-luminosity yes))
-(GimpColorBalanceConfig "2020-06-15 18:08:33"
+(GimpColorBalanceConfig "2020-06-16 00:08:33"
     (time 1592255313)
     (range shadows)
     (cyan-red 0)
@@ -45,7 +75,7 @@
     (magenta-green 0)
     (yellow-blue 0)
     (preserve-luminosity yes))
-(GimpColorBalanceConfig "2020-06-15 14:34:39"
+(GimpColorBalanceConfig "2020-06-15 20:34:39"
     (time 1592242479)
     (range shadows)
     (cyan-red 0)
@@ -60,7 +90,7 @@
     (magenta-green 0)
     (yellow-blue 0)
     (preserve-luminosity yes))
-(GimpColorBalanceConfig "2020-06-10 10:37:28"
+(GimpColorBalanceConfig "2020-06-10 16:37:28"
     (time 1591796248)
     (range shadows)
     (cyan-red 0)
@@ -75,7 +105,7 @@
     (magenta-green 0)
     (yellow-blue 0)
     (preserve-luminosity yes))
-(GimpColorBalanceConfig "2020-06-09 22:25:40"
+(GimpColorBalanceConfig "2020-06-10 04:25:40"
     (time 1591752340)
     (range shadows)
     (cyan-red 0)
@@ -90,7 +120,7 @@
     (magenta-green 0)
     (yellow-blue 0)
     (preserve-luminosity yes))
-(GimpColorBalanceConfig "2020-06-07 17:23:52"
+(GimpColorBalanceConfig "2020-06-07 23:23:52"
     (time 1591561432)
     (range shadows)
     (cyan-red 0)
@@ -105,7 +135,7 @@
     (magenta-green 0)
     (yellow-blue 0)
     (preserve-luminosity yes))
-(GimpColorBalanceConfig "2020-05-29 16:06:35"
+(GimpColorBalanceConfig "2020-05-29 22:06:35"
     (time 1590779195)
     (range shadows)
     (cyan-red 0)
@@ -115,21 +145,6 @@
     (cyan-red 1)
     (magenta-green 0.52600000000000002)
     (yellow-blue 0.032000000000000001)
-    (range highlights)
-    (cyan-red 0)
-    (magenta-green 0)
-    (yellow-blue 0)
-    (preserve-luminosity yes))
-(GimpColorBalanceConfig "2020-05-28 17:50:39"
-    (time 1590699039)
-    (range shadows)
-    (cyan-red 0)
-    (magenta-green 0)
-    (yellow-blue 0)
-    (range midtones)
-    (cyan-red 0)
-    (magenta-green 0)
-    (yellow-blue 0)
     (range highlights)
     (cyan-red 0)
     (magenta-green 0)
