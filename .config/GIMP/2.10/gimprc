@@ -23,7 +23,7 @@
     (comment "Created with GIMP"))
 (undo-levels 10)
 (import-add-alpha yes)
-(import-raw-plug-in "${gimp_plug_in_dir}/plug-ins/file-raw-placeholder/file-raw-placeholder")
+(import-raw-plug-in "${gimp_plug_in_dir}/plug-ins/file-darktable/file-darktable")
 (monitor-xresolution 166)
 (monitor-yresolution 166)
 (default-view
@@ -48,9 +48,8 @@
 (toolbox-wilber no)
 (toolbox-group-menu-mode click)
 (icon-theme "Color")
-(layer-new-name "colors")
+(layer-new-name "around bottle heal")
 (layer-add-mask-type selection)
-(layer-add-mask-invert yes)
 (selection-border-radius 2)
 (fill-options
     (style solid)

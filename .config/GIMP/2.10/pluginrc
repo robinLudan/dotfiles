@@ -6,6 +6,25 @@
 (protocol-version 26)
 (file-version 5)
 
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/gmic_gimp_qt/gmic_gimp_qt" 1698911756
+    (proc-def "plug-in-gmic-qt" 1
+         "G'MIC-Qt (3.3.1)"
+         "G'MIC-Qt (3.3.1)"
+         "Sébastien Fourey"
+         "Sébastien Fourey"
+         "2017"
+         "_G'MIC-Qt..."
+         1
+        (menu-path "<Image>/Filters")
+        (icon icon-name -1 "")
+         "RGB*, GRAY*"
+         6 0
+        (proc-arg 0 "run-mode" "Interactive, non-interactive")
+        (proc-arg 13 "image" "Input image")
+        (proc-arg 16 "drawable" "Input drawable (unused)")
+        (proc-arg 0 "input" "Input layers mode, when non-interactive (0=none, 1=active, 2=all, 3=active & below, 4=active & above, 5=all visibles, 6=all invisibles)")
+        (proc-arg 0 "output" "Output mode, when non-interactive (0=in place,1=new layers,2=new active layers,3=new image)")
+        (proc-arg 4 "command" "G'MIC command string, when non-interactive")))
 (plug-in-def "${gimp_plug_in_dir}/plug-ins/spyro_plus/spyro_plus.py" 1699041409
     (proc-def "plug_in_spyrogimp" 1
          "Draw spyrographs using current tool settings and selection."
@@ -3994,6 +4013,8 @@
         (proc-arg 0 "preserve-alpha-coverage" "Preserve alpha test converage for alpha channel maps")
         (proc-arg 3 "alpha-test-threshold" "Alpha test threshold value for which alpha test converage should be preserved")
         (proc-arg 0 "flip-image" "Flip image vertically on export")))
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/file-darktable/file-darktable" 1693431470
+    (has-init))
 (plug-in-def "${gimp_plug_in_dir}/plug-ins/file-csource/file-csource" 1693431470
     (proc-def "file-csource-save" 1
          "Dump image data in RGB(A) format for C source"

@@ -3,9 +3,8 @@
 (GimpDeviceInfo "Core Pointer"
     (icon-name "gimp-cursor")
     (name "Core Pointer")
-    (tool-options "GimpRectangleSelectOptions"
-        (tool "gimp-rect-select-tool")
-        (corner-radius 46.200000000000003))
+    (tool-options "GimpHistogramOptions"
+        (tool "gimp-curves-tool"))
     (use-fg-bg no)
     (use-opacity-paint-mode no)
     (use-brush no)
