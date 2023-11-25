@@ -79,3 +79,10 @@ alias ga.='git add .'
 alias gcm='git commit -m'
 alias gpom='git push origin main'
 alias gpo='git push origin'
+
+#tmux
+alias tls='tmux ls'
+alias tns='tmux new -s'
+alias tat='tmux attach -t'
+alias tks='tmux kill-server'
+alias td='tmux detach'
