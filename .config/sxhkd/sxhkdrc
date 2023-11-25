@@ -22,9 +22,9 @@ super + Escape
 super + shift + {q,r}
 	bspc {quit,wm -r}
 
-# close and kill
+# close
 super + q
-	bspc node -{c,k}
+	bspc node -c
 
 # alternate between the tiled and monocle layout
 super + m
@@ -106,13 +106,13 @@ super + ctrl + shift + space
 
 # i3 like resizing
 alt + l
-    /bin/sh $HOME/.config/bspwm/resize/shrinkx.sh
+    /bin/sh $HOME/.config/bspwm/scripts/resize/shrinkx.sh
 alt + h 
-    /bin/sh $HOME/.config/bspwm/resize/expandx.sh
+    /bin/sh $HOME/.config/bspwm/scripts/resize/expandx.sh
 alt + k
-    /bin/sh $HOME/.config/bspwm/resize/shrinky.sh
+    /bin/sh $HOME/.config/bspwm/scripts/resize/shrinky.sh
 alt + j
-    /bin/sh $HOME/.config/bspwm/resize/expandy.sh
+    /bin/sh $HOME/.config/bspwm/scripts/resize/expandy.sh
 
 # move a floating window
 super + {Left,Down,Up,Right}
@@ -160,6 +160,9 @@ super + shift + m
 # launch browser
 super + shift + w
 	librewolf
+# file manager 
+super + shift + f
+	pcmanfm
 # lockscreen 
 super + x
 	i3lock -fnc 000000	
