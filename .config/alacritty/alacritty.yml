@@ -60,3 +60,6 @@ colors:
     magenta: "#ae81ff"
     cyan: "#7fdbca"
     white: "#d6deeb"
+
+env:
+  TERM: xterm-256color
