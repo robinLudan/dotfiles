@@ -6,13 +6,12 @@ return {
 	{
 		"akinsho/toggleterm.nvim",
 		version = "*",
-		config = function()
-			require("toggleterm").setup()
-			local keymap = vim.keymap
-			keymap.set("n", "<leader>tf", ":ToggleTerm direction=float<CR>")
-			keymap.set("n", "<leader>th", ":ToggleTerm direction=horizontal<CR>")
-			keymap.set("n", "<leader>tv", ":ToggleTerm direction=vertical<CR>")
-			keymap.set("n", "<leader>tt", ":ToggleTerm direction=tab<CR>")
-		end,
+		config = true,
+		keys = {
+			{ "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", desc = "toggle float terminal" },
+			{ "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>", desc = "toggle vertical terminal" },
+			{ "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>", desc = "toggle horizontal terminal" },
+			{ "<leader>tt", "<cmd>ToggleTerm direction=tab<CR>", desc = "toggle tab terminal" },
+		},
 	},
 }
