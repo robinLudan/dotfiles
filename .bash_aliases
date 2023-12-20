@@ -7,6 +7,8 @@ alias fasterd=' sudo reflector --verbose --sort rate -l 50 -p https -c France -c
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias cls='clear'
+alias clr='clear'
+alias q='exit'
 alias rm='rm -i'
 
 alias update="yay -Syy"
@@ -35,6 +37,7 @@ alias pads='php artisan db:seed'
 # creating new laravel project
 alias nlaravel='composer create-project laravel/laravel'
 alias pamm='php artisan make:model'
+alias pams='php artisan make:seeder'
 #composer
 alias cr='composer require'
 # creating new livewire project
@@ -53,18 +56,22 @@ alias pamn='php artisan make:notification'
 
 #laravel filament
 #full installation, panel included
-alias nfilament='composer require filament/filament:"^3.0-stable" -W'
-alias crff='composer require filament/filament:"^3.0-stable" -W'
-alias fpanel='php artisan filament:install --panels'
+alias nfilament='composer require filament/filament:"^3.1-stable" -W'
+alias crff='composer require filament/filament:"^3.1-stable" -W'
 alias pafip='php artisan filament:install --panels'
 #publishing the config
 alias pavpf='php artisan vendor:publish --tag=filament-config'
-#resources
+# resources
 alias pamfr='php artisan make:filament-resource'
+#relation manager, expects <resource name> <rlship name> <column to display in the table>
+alias pamfrm='php artisan make:filament-relation-manager'
+# other
+alias pamfp='php artisan make:filament-page'
+alias pamfw='php artisan make:filament-widget'
 
 #filament specific "builders", if i'm not using the filament panel(since the panels includes all this)
 #form
-alias crfforms='composer require filament/forms:"^3.0-stable" -W'
+alias crfforms='composer require filament/forms:"^3.1" -W'
 alias pafif='php artisan filament:install --forms'
 #table
 alias crft='composer require filament/tables:"^3.0-stable" -W'
