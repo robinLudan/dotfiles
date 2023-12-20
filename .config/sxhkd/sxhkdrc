@@ -165,7 +165,7 @@ super + shift + f
 	pcmanfm
 # lockscreen 
 super + x
-	i3lock -fnc 000000	
+  betterlockscreen -l dim
 
 # taking a screenshot
 Print
