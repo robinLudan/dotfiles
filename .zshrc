@@ -1,3 +1,4 @@
+
 # Lines configured by zsh-newuser-install
 
 source ~/.zsh_aliases
@@ -17,7 +18,11 @@ HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
+
 # The following lines were added by compinstall
+
+zstyle ':completion:*' completer _complete _ignored _correct
+zstyle ':completion:*' max-errors 3
 zstyle :compinstall filename '/home/robin/.zshrc'
 
 autoload -Uz compinit

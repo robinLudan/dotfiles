@@ -38,6 +38,11 @@ alias pads='php artisan db:seed'
 alias nlaravel='composer create-project laravel/laravel'
 alias pamm='php artisan make:model'
 alias pams='php artisan make:seeder'
+#blueprint
+alias pabn='php artisan blueprint:new'
+alias pabb='php artisan blueprint:build'
+alias pabe='php artisan blueprint:erase'
+alias pabeb='php artisan blueprint:erase && php artisan blueprint:build'
 #composer
 alias cr='composer require'
 # creating new livewire project
