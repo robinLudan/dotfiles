@@ -1,6 +1,7 @@
 
 # Lines configured by zsh-newuser-install
 
+export EDITOR=nvim
 source ~/.zsh_aliases
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
