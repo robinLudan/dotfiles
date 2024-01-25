@@ -13,7 +13,10 @@ alias rm='rm -i'
 
 alias update="yay -Syy"
 alias upgrade="yay -Syu"
-alias cleanall="yay -Rcus $(yay -Qdtq)"
+alias allcache="du -sh /var/cache/pacman/pkg .cache/yay"
+alias junk="paccache -dvk2"
+alias cleanjunk="paccache -rvk2 && paccache -ruvk0"
+alias cleanall="yay -Sc"
 
 alias wtf='echo "What the fuck!!!!!!"'
 
@@ -33,6 +36,8 @@ alias pamf='php artisan migrate:fresh'
 alias pamfs='php artisan migrate:fresh --seed'
 alias pamr='php artisan migrate:rollback'
 alias pads='php artisan db:seed'
+# Policies
+alias pamp='php artisan make:policy'
 
 # creating new laravel project
 alias nlaravel='composer create-project laravel/laravel'
@@ -96,5 +101,6 @@ alias gpo='git push origin'
 alias tls='tmux ls'
 alias tns='tmux new -s'
 alias tat='tmux attach -t'
+alias tkst='tmux kill-session -t'
 alias tks='tmux kill-server'
 alias td='tmux detach'
