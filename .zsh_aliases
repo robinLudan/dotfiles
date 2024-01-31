@@ -29,7 +29,8 @@ alias pdisconnect='protonvpn-cli disconnect'
 # full-stack-development
 alias pa='php artisan'
 alias pas='php artisan serve'
-alias pat='php artisan tinker'
+alias pat='php artisan test'
+alias pamt='php artisan make:test'
 # database
 alias pam='php artisan migrate'
 alias pamf='php artisan migrate:fresh'
