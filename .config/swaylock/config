@@ -38,7 +38,7 @@ indicator-radius=100
 # bigger indicator
 # indicator-radius=300
 
-#indicator-thickness=20
+indicator-thickness=13
 indicator-caps-lock
 
 # Define all colors
