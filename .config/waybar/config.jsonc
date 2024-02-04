@@ -1,0 +1,106 @@
+{
+  "layer": "top",
+  "margin-left": 6,
+  "margin-right": 6,
+  "margin-top": 6,
+  "margin-bottom": 2,
+  "modules-left": [
+    "custom/launcher",
+    "hyprland/workspaces"
+  ],
+  "modules-center": ["clock", "custom/spotify"],
+  "modules-right": ["bluetooth", "pulseaudio", "network", "user", "tray"],
+  "custom/spotify": {
+    "format": " {}",
+    "max-length": 300,
+    "exec-if": "pgrep spotify",
+    "exec-on-event": "on-click",
+    "interval": 1,
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl previous",
+    "on-scroll-down": "playerctl next",
+    "tooltip": true,
+    "escape": true,
+    "exec": "~/.config/waybar/scripts/player.sh"
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": " ",
+      "2": " ",
+      "3": " ",
+      "4": " ",
+      "5": " ",
+      "active": "",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "*": 1
+    }
+  },
+  "hyprland/language": {
+    "format": "󰌌 {}",
+    "format-en": "Eng"
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 8
+  },
+  "clock": {
+    "format": "{:%A %d/%m %H:%M}"
+  },
+  "custom/launcher": {
+    "format": " "
+  },
+  "custom/power": {
+    "format": "⏻ ",
+    "on-click": "wlogout",
+    "tooltip": false
+  },
+  "bluetooth": {
+	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+	"format": " {status}",
+	"format-disabled": "󰂲",
+	"format-connected": " {num_connections} connected",
+	"tooltip-format": "{controller_alias}\t{controller_address}",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+  },
+  "network": {
+    "interface": "wlp4s0",
+    "format": "{ifname}",
+    "format-wifi": "{essid}   ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗 ",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗 ",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+  "user": {
+    "format": "{user} (up {work_d} days ↑)",
+    "interval": 60,
+    "height": 30,
+    "width": 30,
+    "icon": true
+  }
+}
