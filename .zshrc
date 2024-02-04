@@ -2,6 +2,8 @@
 # Lines configured by zsh-newuser-install
 
 export EDITOR=nvim
+export TERM=alacritty
+
 source ~/.zsh_aliases
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
