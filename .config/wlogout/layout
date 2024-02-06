@@ -12,7 +12,7 @@
 }
 {
     "label" : "logout",
-    "action" : "sleep 1; hyprctl dispatch exit",
+    "action" : "sleep 1; hyprctl dispatch exit 0",
     "text" : "Exit",
     "keybind" : "e"
 }
@@ -24,7 +24,7 @@
 }
 {
     "label" : "suspend",
-    "action" : "sleep 1; systemctl suspend",
+    "action" : "sleep 1; swaylock -f && systemctl suspend",
     "text" : "Suspend",
     "keybind" : "u"
 }
