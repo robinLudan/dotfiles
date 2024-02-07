@@ -1,6 +1,5 @@
 alias sudo='sudo '
 alias vim='nvim'
-alias pacman='sudo pacman'
 alias fasterd=' sudo reflector --verbose --sort rate -l 50 -p https -c France -c Germany -c Italy --save /etc/pacman.d/mirrorlist'
 
 
@@ -10,13 +9,6 @@ alias cls='clear'
 alias clr='clear'
 alias q='exit'
 alias rm='rm -i'
-
-alias update="yay -Syy"
-alias upgrade="yay -Syu"
-alias allcache="du -sh /var/cache/pacman/pkg .cache/yay"
-alias junk="paccache -dvk2"
-alias cleanjunk="paccache -rvk2 && paccache -ruvk0"
-alias cleanall="yay -Sc"
 
 alias wtf='echo "What the fuck!!!!!!"'
 
