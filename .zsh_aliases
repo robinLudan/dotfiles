@@ -51,6 +51,9 @@ alias pabe='php artisan blueprint:erase'
 alias pabeb='php artisan blueprint:erase && php artisan blueprint:build'
 #composer
 alias cr='composer require'
+alias cs='composer show'
+alias cu='composer update'
+alias crm='composer remove'
 # creating new livewire project
 alias nwire='composer require livewire/livewire'
 alias crll='composer require livewire/livewire'
