@@ -97,10 +97,22 @@
     "max-length": 50
   },
   "user": {
-    "format": "{user} (up {work_d} days ↑)",
+    // "format": "{user} (up {work_d} days ↑)",
+    "format": "(up {work_d} days ↑)",
     "interval": 60,
     "height": 30,
     "width": 30,
     "icon": true
-  }
+  },
+  "battery": {
+    "bat": "BAT0",
+    "interval": 60,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "max-length": 25
+  },
 }
