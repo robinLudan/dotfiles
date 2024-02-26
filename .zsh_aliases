@@ -85,7 +85,7 @@ alias pafit='php artisan filament:install --tables'
 #notification
 alias crfn='composer require filament/notifications:"^3.0-stable" -W'
 alias pafin='php artisan filament:install --notifications'
-=======
+
 #git related
 alias g='git'
 alias gs='git status'
@@ -106,7 +106,6 @@ alias gstp='git stash pop'
 alias gsts='git stash save'
 alias gl='git log'
 alias glo='git log --oneline'
->>>>>>> 14622b1 (git aliases)
 
 #tmux
 alias tls='tmux ls'
