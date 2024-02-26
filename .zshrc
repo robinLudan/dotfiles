@@ -15,7 +15,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
     archlinux
-    git
 )
 source $ZSH/oh-my-zsh.sh
 
