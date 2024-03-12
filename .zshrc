@@ -2,7 +2,8 @@
 # Lines configured by zsh-newuser-install
 
 export EDITOR=nvim
-export TERM=alacritty
+export TERM=kitty
+# export TERM=alacritty
 
 source ~/.zsh_aliases
 
@@ -34,5 +35,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+export PATH=$HOME/.local/bin:$PATH
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
