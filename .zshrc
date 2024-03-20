@@ -14,15 +14,16 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(
-    archlinux
-)
+# plugins=(
+#     # archlinux
+# )
 source $ZSH/oh-my-zsh.sh
 
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
+export KEYTIMEOUT=1
 # End of lines configured by zsh-newuser-install
 
 # The following lines were added by compinstall
@@ -38,3 +39,6 @@ compinit
 export PATH=$HOME/.local/bin:$PATH
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# load zsh syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
