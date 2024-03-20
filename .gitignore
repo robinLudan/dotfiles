@@ -3,8 +3,12 @@
 !~/.zsh_aliases
 !~/.zshrc
 !~/.config/alacritty/alacritty.toml
+!~/.config/kitty/
 !~/.config/wlogout/
 !~/.config/dunst/
 !~/.config/waybar/
 !~/.config/scripts/
 !~/.config/wlogout/
+
+# ignore everying else
+*
