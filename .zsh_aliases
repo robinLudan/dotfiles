@@ -1,5 +1,6 @@
 alias sudo='sudo '
 alias vim='nvim'
+alias v='nvim'
 alias fasterd=' sudo reflector --verbose --sort rate -l 50 -p https -c France -c Germany -c Italy --save /etc/pacman.d/mirrorlist'
 
 
@@ -106,6 +107,10 @@ alias gstp='git stash pop'
 alias gsts='git stash save'
 alias gl='git log'
 alias glo='git log --oneline'
+alias glog='git log --oneline --graph'
+alias gm='git merge'
+alias gr='git reabse'
+alias grm='git rebase main'
 
 #tmux
 alias tls='tmux ls'
