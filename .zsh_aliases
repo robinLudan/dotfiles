@@ -11,15 +11,12 @@ alias clr='clear'
 alias q='exit'
 alias rm='rm -i'
 
-alias wtf='echo "What the fuck!!!!!!"'
+# laravel
+# creating new laravel project
+alias nlaravel='composer create-project laravel/laravel'
+alias pamm='php artisan make:model'
+alias pams='php artisan make:seeder'
 
-# protonvpn "shorthands"
-alias plogin='protonvpn-cli login luther0101'
-alias pconnect='protonvpn-cli connect'
-alias pstatus='protonvpn-cli status'
-alias pdisconnect='protonvpn-cli disconnect'
-
-# full-stack-development
 alias pa='php artisan'
 alias pas='php artisan serve'
 alias pat='php artisan tinker'
@@ -33,15 +30,15 @@ alias pads='php artisan db:seed'
 # Policies
 alias pamp='php artisan make:policy'
 
-# creating new laravel project
-alias nlaravel='composer create-project laravel/laravel'
-alias pamm='php artisan make:model'
-alias pams='php artisan make:seeder'
+#notification
+alias pamn='php artisan make:notification'
+
 #blueprint
 alias pabn='php artisan blueprint:new'
 alias pabb='php artisan blueprint:build'
 alias pabe='php artisan blueprint:erase'
 alias pabeb='php artisan blueprint:erase && php artisan blueprint:build'
+
 #composer
 alias cr='composer require'
 alias cs='composer show'
@@ -52,19 +49,11 @@ alias nwire='composer require livewire/livewire'
 alias crll='composer require livewire/livewire'
 alias ncomponent='php artisan livewire:make'
 alias palm='php artisan livewire:make'
-# setting up breeze (for login forms)
-alias nbreeze='composer require laravel/breeze --dev'
-alias nblade='php artisan breeze:install blade'
-alias nrd='npm run dev'
-# create livewire.php in config and change layouts path
-alias palp='php artisan livewire:publish --config'
-#notification
-alias pamn='php artisan make:notification'
 
-#laravel filament
+#filamenphp
 #full installation, panel included
-alias nfilament='composer require filament/filament:"^3.1-stable" -W'
-alias crff='composer require filament/filament:"^3.1-stable" -W'
+alias nfilament='composer require filament/filament'
+alias crff='composer require filament/filament'
 alias pafip='php artisan filament:install --panels'
 #publishing the config
 alias pavpf='php artisan vendor:publish --tag=filament-config'
@@ -75,17 +64,6 @@ alias pamfrm='php artisan make:filament-relation-manager'
 # other
 alias pamfp='php artisan make:filament-page'
 alias pamfw='php artisan make:filament-widget'
-
-#filament specific "builders", if i'm not using the filament panel(since the panels includes all this)
-#form
-alias crfforms='composer require filament/forms:"^3.1" -W'
-alias pafif='php artisan filament:install --forms'
-#table
-alias crft='composer require filament/tables:"^3.0-stable" -W'
-alias pafit='php artisan filament:install --tables'
-#notification
-alias crfn='composer require filament/notifications:"^3.0-stable" -W'
-alias pafin='php artisan filament:install --notifications'
 
 #git related
 alias g='git'
