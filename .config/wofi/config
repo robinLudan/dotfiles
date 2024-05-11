@@ -1,0 +1,12 @@
+hide_scroll=true
+insensitive=true
+location=center
+matching=fuzzy
+mode=drun
+prompt=type something ...
+term=kitty
+width=20%
+height=40%
+line_wrap=word
+single_click=true
+allow_images=true
