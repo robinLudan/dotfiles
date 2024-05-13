@@ -7,7 +7,6 @@
   "modules-left": [
     "custom/launcher",
     "hyprland/workspaces",
-    "hyprland/window", 
   ],
   "modules-center": ["clock", "custom/spotify"],
   "modules-right": ["pulseaudio", "tray"],
@@ -19,8 +18,8 @@
     "interval": 1,
     "return-type": "json",
     "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl previous",
-    "on-scroll-down": "playerctl next",
+    // "on-scroll-up": "playerctl previous",
+    // "on-scroll-down": "playerctl next",
     "escape": true,
     "exec": "~/.config/waybar/scripts/spotify.sh"
   },
@@ -52,8 +51,8 @@
     "format-muted": "",
     "format-icons": {
         "headphone": "",
-        "hands-free": "",
-        "headset": "",
+        "hands-free": " ",
+        "headset": " ",
         "phone": "",
         "portable": "",
         "car": "",
