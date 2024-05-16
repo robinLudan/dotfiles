@@ -1,8 +1,6 @@
 
 # Lines configured by zsh-newuser-install
 
-fastfetch
-
 export EDITOR=nvim
 export TERM=kitty
 # export TERM=alacritty

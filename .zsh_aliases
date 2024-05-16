@@ -1,6 +1,7 @@
 alias sudo='sudo '
 alias vim='nvim'
 alias v='nvim'
+alias ff='fastfetch'
 alias fasterd=' sudo reflector --verbose --sort rate -l 50 -p https -c France -c Germany -c Italy --save /etc/pacman.d/mirrorlist'
 
 
