@@ -33,7 +33,7 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 6x6
+    offset = 4x4
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -82,7 +82,7 @@
     separator_height = 2
 
     # Padding between text and separator.
-    padding = 10
+    padding = 8
 
     # Horizontal padding.
     horizontal_padding = 8
@@ -124,7 +124,7 @@
     # Set to 0 to disable.
     # A client can set the 'transient' hint to bypass this. See the rules
     # section for how to disable this if necessary
-    # idle_threshold = 120
+    idle_threshold = 120
 
     ### Text ###
 
@@ -182,6 +182,8 @@
     # seconds.
     # Set to -1 to disable.
     show_age_threshold = 60
+
+    word_wrap = true
 
     # Specify where to make an ellipsis in long lines.
     # Possible values are "start", "middle" and "end".
