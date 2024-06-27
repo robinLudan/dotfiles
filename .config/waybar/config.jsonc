@@ -9,7 +9,7 @@
     "hyprland/workspaces",
   ],
   "modules-center": ["clock", "custom/spotify"],
-  "modules-right": ["pulseaudio", "tray"],
+  "modules-right": ["pulseaudio", "bluetooth", "tray"],
   "custom/spotify": {
     "format": " {}",
     "max-length": 300,
@@ -40,13 +40,14 @@
 	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
 	"format": " {status}",
 	"format-disabled": "󰂲",
+        "on-click": "overskride",
 	"format-connected": " {num_connections} connected",
 	"tooltip-format": "{controller_alias}\t{controller_address}",
 	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
 	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
   },
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
+    "format": "{icon} {volume}%",
     "format-bluetooth": "{volume}% {icon}",
     "format-muted": "",
     "format-icons": {
