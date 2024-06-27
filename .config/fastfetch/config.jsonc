@@ -43,6 +43,24 @@
           "format": "{2}"
       },
       {
+          "type": "wm",
+          "key": "",
+      },
+      {
+          "type": "cpu",
+          "key": "󰻠",
+      },
+      {
+          "type": "gpu",
+          "key": "",
+          "format": "{2}"
+      },
+      {
+          "type": "memory",
+          "key": "󰑭",
+          "format": "{1}/{2} ({3})"
+      },
+      {
           "type": "uptime",
           "key": "󰅐",
           "format": "{1}d {2}h {3}m"
@@ -55,11 +73,6 @@
       {
           "type": "shell",
           "key": ""
-      },
-      {
-          "type": "memory",
-          "key": "󰑭",
-          "format": "{1}/{2} ({3})"
       },
       "break"
   ]
