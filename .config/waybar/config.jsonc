@@ -4,12 +4,13 @@
   "margin-left": 8,
   "margin-right": 8,
   "margin-top": 6,
+  "spacing": 6,
   "modules-left": [
     "custom/launcher",
     "hyprland/workspaces",
   ],
   "modules-center": ["clock", "custom/spotify"],
-  "modules-right": ["pulseaudio", "bluetooth", "tray"],
+  "modules-right": ["pulseaudio", "bluetooth", "battery", "tray"],
   "custom/spotify": {
     "format": " {}",
     "max-length": 300,
@@ -34,30 +35,30 @@
     "format-alt": "{:%a, %d. %b  %H:%M}"
   },
   "custom/launcher": {
-    "format": " "
+    "format": " ",
   },
   "bluetooth": {
-	// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-	"format": " {status}",
-	"format-disabled": "󰂲",
-        "on-click": "overskride",
-	"format-connected": " {num_connections} connected",
-	"tooltip-format": "{controller_alias}\t{controller_address}",
-	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+    "format": " {status}",
+    "format-disabled": "󰂲",
+    "on-click": "overskride",
+    "format-connected": " connected",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
   },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-bluetooth": "{volume}% {icon}",
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{icon}",
     "format-muted": "",
     "format-icons": {
-        "headphone": "",
-        "hands-free": " ",
-        "headset": " ",
-        "phone": "",
-        "portable": "",
-        "car": "",
-        "default": ["", ""]
+      "headphone": "",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
     },
     "scroll-step": 1,
     "on-click": "pavucontrol",
@@ -70,4 +71,17 @@
     "width": 30,
     "icon": true
   },
+  "battery": {
+    "bat": "BAT0",
+    "interval": 60,
+    "states": {
+        "average": 70,
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "max-length": 25
+  }
 }

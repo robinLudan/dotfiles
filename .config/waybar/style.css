@@ -11,10 +11,6 @@ window#waybar {
   background: rgba(26, 27, 38, 0.6);
 }
 
-window#waybar.hidden {
-  opacity: 0.2;
-}
-
 #workspaces button {
   background-color: transparent;
   color: #ffffff;
@@ -39,6 +35,27 @@ tooltip label {
 #pulseaudio {
   color: #7fbbb3;
 }
+
+#battery {
+  color: #7fbbb3;
+}
+
+#battery.warning {
+  color: #ffc100;
+}
+
+#battery.critical {
+  color: #c40c0c;
+}
+
+#battery.average {
+  color: #219c90;
+}
+
+#battery.charging {
+  color: #8decb4;
+}
+
 #custom-spotify {
   border-radius: 5px;
   background: #83c092;
