@@ -4,7 +4,7 @@
   "margin-left": 8,
   "margin-right": 8,
   "margin-top": 6,
-  "spacing": 6,
+  // "spacing": 6,
   "modules-left": [
     "custom/launcher",
     "hyprland/workspaces",

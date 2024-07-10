@@ -1,6 +1,6 @@
 * {
   font-family: JetBrainsMono Nerd Font;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   min-height: 15px;
   padding: 0 3px;
@@ -8,7 +8,13 @@
 
 window#waybar {
   border-radius: 5px;
-  background: rgba(26, 27, 38, 0.6);
+  background: #060e20;
+}
+
+#custom-launcher {
+  color: #ffffff;
+  padding: 0 5px;
+  margin: 5px 0;
 }
 
 #workspaces button {
@@ -24,12 +30,25 @@ window#waybar {
   background-color: #64727d;
   box-shadow: inset 0 -3px #ffffff;
 }
+
 tooltip {
   background: #272e33;
 }
 
 tooltip label {
   color: white;
+}
+
+#clock {
+  color: #ffffff;
+}
+
+#custom-spotify {
+  border-radius: 5px;
+  background: #83c092;
+  color: #282828;
+  padding: 0 5px;
+  margin: 5px 0;
 }
 
 #pulseaudio {
@@ -54,12 +73,4 @@ tooltip label {
 
 #battery.charging {
   color: #8decb4;
-}
-
-#custom-spotify {
-  border-radius: 5px;
-  background: #83c092;
-  color: #282828;
-  padding: 0 5px;
-  margin: 5px 0;
 }
