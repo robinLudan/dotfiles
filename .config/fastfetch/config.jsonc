@@ -12,7 +12,9 @@
 
   "display": {
       "separator": " ",
-      "keyWidth": 4,
+      "key": {
+        "keyWidth": 4,
+      },
       "color": {
         "keys": "magenta"
       },
