@@ -5,12 +5,9 @@
   "margin-right": 8,
   "margin-top": 6,
   // "spacing": 6,
-  "modules-left": [
-    "custom/launcher",
-    "hyprland/workspaces",
-  ],
+  "modules-left": ["custom/launcher", "hyprland/workspaces"],
   "modules-center": ["clock", "custom/spotify"],
-  "modules-right": ["pulseaudio", "bluetooth", "battery", "tray"],
+  "modules-right": ["pulseaudio", "bluetooth", "tray", "battery"],
   "custom/spotify": {
     "format": " {}",
     "max-length": 300,
@@ -22,20 +19,41 @@
     // "on-scroll-up": "playerctl previous",
     // "on-scroll-down": "playerctl next",
     "escape": true,
-    "exec": "~/.config/waybar/scripts/spotify.sh"
+    "exec": "~/.config/waybar/scripts/spotify.sh",
   },
   "hyprland/language": {
     "format": "󰌌 {}",
-    "format-en": "Eng"
+    "format-en": "Eng",
   },
   "tray": {
     "icon-size": 22,
   },
   "clock": {
-    "format-alt": "{:%a, %d. %b  %H:%M}"
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A, %B %d, %Y (%R)}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "left",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+      },
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+    },
   },
   "custom/launcher": {
     "format": " ",
+    "tooltip": false,
   },
   "bluetooth": {
     // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
@@ -45,7 +63,7 @@
     "format-connected": " connected",
     "tooltip-format": "{controller_alias}\t{controller_address}",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
   },
   "pulseaudio": {
     "format": "{icon}  {volume}%",
@@ -58,30 +76,30 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", ""]
+      "default": ["", ""],
     },
     "scroll-step": 1,
     "on-click": "pavucontrol",
-    "ignored-sinks": ["Easy Effects Sink"]
+    "ignored-sinks": ["Easy Effects Sink"],
   },
   "user": {
     "format": "(up {work_d} days ↑)",
     "interval": 60,
     "height": 30,
     "width": 30,
-    "icon": true
+    "icon": true,
   },
   "battery": {
     "bat": "BAT0",
     "interval": 60,
     "states": {
-        "average": 70,
-        "warning": 30,
-        "critical": 15
+      "average": 70,
+      "warning": 30,
+      "critical": 15,
     },
-    "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
-    "format-icons": [" ", " ", " ", " ", " "],
-    "max-length": 25
-  }
+    "format": "{icon}",
+    "format-charging": "",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂂", "󰁹"],
+    "format-time": "{M} min",
+  },
 }
