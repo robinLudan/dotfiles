@@ -1,9 +1,0 @@
-!~/.config/hypr/
-!~/.config/tmux/tmux.conf
-!~/.zsh_aliases
-!~/.zshrc
-!~/.config/kitty/
-!~/.config/mako/
-!~/.config/waybar/
-# ignore everying else
-*
