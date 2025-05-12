@@ -226,6 +226,9 @@ return { -- LSP Configuration & Plugins
           },
         },
       },
+
+      docker_compose_language_service = {},
+      dockerls = {},
     }
 
     -- Ensure the servers and tools above are installed
@@ -253,6 +256,8 @@ return { -- LSP Configuration & Plugins
       'phpstan',
       'markdownlint',
       'golangci-lint',
+      'yamllint',
+      'jsonlint',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
