@@ -158,25 +158,8 @@ return { -- LSP Configuration & Plugins
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
-      intelephense = {
-        on_attach = function(client)
-          client.server_capabilities.documentFormattingProvider = false
-          client.server_capabilities.documentRangeFormattingProvider = false
-        end,
-      },
+      intelephense = {},
       phpactor = {
-        on_attach = function(client)
-          client.server_capabilities.completionProvider = false
-          client.server_capabilities.hoverProvider = false
-          client.server_capabilities.referencesProvider = false
-          client.server_capabilities.selectionRangeProvider = false
-          client.server_capabilities.signatureHelpProvider = false
-          client.server_capabilities.workspaceSymbolProvider = false
-          client.server_capabilities.definitionProvider = false
-          client.server_capabilities.documentSymbolProvider = false
-          client.server_capabilities.documentFormattingProvider = false
-          client.server_capabilities.documentRangeFormattingProvider = false
-        end,
         init_options = {
           ['language_server_phpstan.enabled'] = false,
           ['language_server_psalm.enabled'] = false,
@@ -185,7 +168,6 @@ return { -- LSP Configuration & Plugins
       html = {},
       cssls = {},
       graphql = {},
-      eslint = {},
       emmet_ls = {
         filetypes = { 'css', 'eruby', 'html', 'javascript', 'javascriptreact', 'less', 'sass', 'scss', 'svelte', 'pug', 'typescriptreact', 'vue' },
         init_options = {
@@ -253,7 +235,6 @@ return { -- LSP Configuration & Plugins
       'gofumpt',
       'goimports',
       -- linters
-      'phpstan',
       'markdownlint',
       'golangci-lint',
       'yamllint',
