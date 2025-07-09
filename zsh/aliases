@@ -96,13 +96,13 @@ alias grst='git restore --staged'
 alias grsta='git restore --staged .'
 
 #tmux
-alias tls='tmux ls'
-alias tns='tmux new -s'
-alias tat='tmux attach -t'
-alias tkst='tmux kill-session -t'
-alias tks='tmux kill-server'
-alias td='tmux detach'
-alias tr='tmux a' #[t]mux [r]ecent
+alias tmls='tmux ls'
+alias tmns='tmux new -s'
+alias tmat='tmux attach -t'
+alias tmkst='tmux kill-session -t'
+alias tmks='tmux kill-server'
+alias tmd='tmux detach'
+alias tmr='tmux a'
 
 #docker
 alias dps='docker ps'
