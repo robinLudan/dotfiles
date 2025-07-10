@@ -3,14 +3,11 @@
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Apps
-Apps=('hypr' 'nvim' 'kitty' 'fastfetch' 'waybar' 'wofi' 'mako')
+Apps=('hypr' 'nvim' 'kitty' 'fastfetch' 'waybar' 'wofi' 'mako' 'tmux')
 
 # Zsh and aliases
 ln -sf $DOTFILES/zsh/zshrc $HOME/.zshrc
 ln -sf $DOTFILES/zsh/aliases $HOME/.zsh_aliases
-
-# Separate tmux since I only need it's config, not the plugins
-ln -sf $DOTFILES/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
 
 # Remove any automatically generated config and create a symbolic link
 for i in "${Apps[@]}"; do
