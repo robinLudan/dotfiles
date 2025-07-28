@@ -16,8 +16,4 @@ return { -- short plugins that don't need much configuration (if any)
     'christoomey/vim-tmux-navigator',
     event = 'VeryLazy',
   },
-  { -- blade highlighting
-    'jwalton512/vim-blade',
-    ft = 'blade',
-  },
 }
