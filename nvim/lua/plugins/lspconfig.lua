@@ -227,6 +227,7 @@ return {
       tailwindcss = {},
       yamlls = {},
       gopls = {},
+      bashls = {},
       -- clangd = {},
       -- pyright = {},
       -- rust_analyzer = {},
@@ -286,6 +287,7 @@ return {
       'golangci-lint',
       'yamllint',
       'jsonlint',
+      'shellcheck',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
