@@ -2,7 +2,6 @@ return {
   'nvim-lualine/lualine.nvim',
   lazy = false,
   dependencies = {
-    'arkav/lualine-lsp-progress',
     'nvim-tree/nvim-web-devicons',
   },
   opts = {
@@ -10,13 +9,7 @@ return {
       section_separators = '',
       component_separators = '',
       globalstatus = true,
-      theme = {
-        normal = {
-          a = 'StatusLine',
-          b = 'StatusLine',
-          c = 'StatusLine',
-        },
-      },
+      theme = 'tokyonight',
     },
     sections = {
       lualine_a = {
@@ -26,7 +19,7 @@ return {
         'branch',
         {
           'diff',
-          symbols = { added = ' ', modified = ' ', removed = ' ' },
+          symbols = { added = ' ', modified = '󰝤 ', removed = ' ' },
         },
         function()
           return '󰅭 ' .. vim.pesc(tostring(#vim.tbl_keys(vim.lsp.get_clients())) or '')
@@ -50,10 +43,8 @@ return {
         '(vim.bo.expandtab and "␠ " or "⇥ ") .. vim.bo.shiftwidth',
       },
       lualine_z = {
-        'searchcount',
-        'selectioncount',
-        'location',
         'progress',
+        'location',
       },
     },
   },
