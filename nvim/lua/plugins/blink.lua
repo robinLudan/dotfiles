@@ -41,19 +41,18 @@ return {
       },
 
       appearance = {
-        -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
-        -- Adjusts spacing to ensure icons are aligned
         nerd_font_variant = 'mono',
       },
 
       completion = {
-        -- By default, you may press `<c-space>` to show the documentation.
-        -- Optionally, set `auto_show = true` to show the documentation after a delay.
         documentation = { auto_show = false },
-
-        -- Change default icons to use nvim-web-devicons
         menu = {
+          border = 'rounded',
           draw = {
+            columns = {
+              { 'kind_icon', 'label', gap = 1 },
+              { 'kind' },
+            },
             components = {
               kind_icon = {
                 text = function(ctx)
