@@ -3,10 +3,10 @@
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Apps
-Apps=('nvim' 'foot' 'kitty' 'fastfetch' 'waybar' 'mako' 'tmux')
+Apps=('niri' 'swaylock' 'fuzzel' 'nvim' 'foot' 'kitty' 'fastfetch' 'waybar' 'tmux')
 
 # Zsh aliases
-ln -sf $DOTFILES/zsh/aliases $HOME/.zsh_aliases
+ln -sf "$DOTFILES/zsh/aliases" "$HOME/.bash_aliases"
 
 # Remove any automatically generated config and create a symbolic link
 for i in "${Apps[@]}"; do
