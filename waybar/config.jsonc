@@ -1,27 +1,9 @@
 {
-  "output": "eDP-1",
   "layer": "top",
   "position": "top",
-  "margin-left": 8,
-  "margin-right": 8,
-  "margin-top": 6,
-  // "spacing": 6,
-  "modules-left": ["custom/launcher", "hyprland/workspaces"],
-  "modules-center": ["clock", "custom/spotify"],
-  "modules-right": ["pulseaudio", "bluetooth", "tray", "battery"],
-  "custom/spotify": {
-    "format": " {}",
-    "max-length": 300,
-    "exec-if": "pgrep spotify",
-    "exec-on-event": "on-click",
-    "interval": 1,
-    "return-type": "json",
-    "on-click": "playerctl play-pause",
-    // "on-scroll-up": "playerctl previous",
-    // "on-scroll-down": "playerctl next",
-    "escape": true,
-    "exec": "~/.config/waybar/scripts/spotify.sh",
-  },
+  "modules-left": ["custom/launcher", "niri/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["group/other", "group/essentials", "tray"],
   "hyprland/language": {
     "format": "󰌌 {}",
     "format-en": "Eng",
@@ -53,18 +35,11 @@
     },
   },
   "custom/launcher": {
-    "format": " ",
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+    },
     "tooltip": false,
-  },
-  "bluetooth": {
-    // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-    "format": " {status}",
-    "format-disabled": "󰂲",
-    "on-click": "overskride",
-    "format-connected": " connected",
-    "tooltip-format": "{controller_alias}\t{controller_address}",
-    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
   },
   "pulseaudio": {
     "format": "{icon}  {volume}%",
@@ -92,15 +67,53 @@
   },
   "battery": {
     "bat": "BAT0",
-    "interval": 60,
+    "interval": 5,
     "states": {
-      "average": 70,
+      "good": 70,
       "warning": 30,
       "critical": 15,
     },
-    "format": "{icon}",
-    "format-charging": "",
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
     "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂂", "󰁹"],
-    "format-time": "{M} min",
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+  },
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+    },
+  },
+  "niri/window": {
+    "format": "{title}",
+    "max-length": 50,
+  },
+  "power-profiles-daemon": {
+    "format": "{icon} {profile}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": "",
+    },
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["", "", ""],
+  },
+  "group/essentials": {
+    "orientation": "horizontal",
+    "modules": ["backlight", "pulseaudio", "battery"],
+  },
+  "group/other": {
+    "orientation": "horizontal",
+    "modules": ["temperature", "power-profiles-daemon"],
   },
 }
