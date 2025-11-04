@@ -55,10 +55,11 @@ tooltip label {
 }
 
 #battery {
-  color: #7fbbb3;
+  background-color: transparent;
 }
 
-#battery.charging {
+#battery.charging,
+#battery.good {
   color: #8decb4;
 }
 
