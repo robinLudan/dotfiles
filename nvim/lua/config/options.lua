@@ -70,5 +70,3 @@ opt.softtabstop = 2
 opt.smartindent = true
 opt.breakindent = true -- maintain indent when wrapping indented lines
 opt.linebreak = true -- wrap at word boundaries
-
-opt.conceallevel = 2
