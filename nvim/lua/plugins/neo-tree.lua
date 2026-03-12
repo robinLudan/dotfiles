@@ -9,7 +9,7 @@ return {
     'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
     'MunifTanjim/nui.nvim',
   },
-  lazy = false,
+  event = 'VimEnter',
   keys = {
     { '<leader>e', ':Neotree toggle<CR>', { desc = 'NeoTree toggle' } },
   },

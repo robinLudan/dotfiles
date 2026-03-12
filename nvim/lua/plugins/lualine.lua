@@ -1,6 +1,6 @@
 return {
   'nvim-lualine/lualine.nvim',
-  lazy = false,
+  event = 'VimEnter',
   dependencies = {
     'nvim-tree/nvim-web-devicons',
   },
@@ -21,9 +21,22 @@ return {
           'diff',
           symbols = { added = ' ', modified = '󰝤 ', removed = ' ' },
         },
-        function()
-          return '󰅭 ' .. vim.pesc(tostring(#vim.tbl_keys(vim.lsp.get_clients())) or '')
-        end,
+        -- Cached LSP client count for better performance
+        (function()
+          local lsp_clients = 0
+          local lsp_count = function()
+            local clients = vim.lsp.get_clients()
+            lsp_clients = #clients
+            return lsp_clients > 0 and '󰅭 ' .. lsp_clients or ''
+          end
+          -- Update cache when LSP attaches/detaches
+          vim.api.nvim_create_autocmd({ 'LspAttach', 'LspDetach' }, {
+            callback = function()
+              lsp_clients = #vim.lsp.get_clients()
+            end,
+          })
+          return lsp_count
+        end)(),
         { 'diagnostics', sources = { 'nvim_diagnostic' } },
       },
       lualine_c = {

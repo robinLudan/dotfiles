@@ -37,6 +37,12 @@ opt.updatetime = 250
 -- Displays which-key popup sooner
 opt.timeoutlen = 300
 
+-- Performance optimizations
+opt.lazyredraw = true      -- Don't redraw during macro/register execution
+opt.ttyfast = true         -- Assume fast terminal
+opt.synmaxcol = 300        -- Limit syntax highlighting to first 300 chars (prevents lag on long lines)
+opt.wildoptions:append 'pum' -- Better completion menu with popup
+
 -- Configure how new splits should be opened
 opt.splitright = true
 opt.splitbelow = true

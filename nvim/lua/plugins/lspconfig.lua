@@ -45,6 +45,10 @@ return {
     --    That is to say, every time a new file is opened that is associated with
     --    an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
     --    function will be executed to configure the current buffer
+
+    -- Configurable flag to disable LSP document highlight for better performance
+    local disable_document_highlight = true
+
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
       callback = function(event)
@@ -118,7 +122,7 @@ return {
         --
         -- When you move your cursor, the highlights will be cleared (the second autocommand).
         local client = vim.lsp.get_client_by_id(event.data.client_id)
-        if client and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_documentHighlight, event.buf) then
+        if not disable_document_highlight and client and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_documentHighlight, event.buf) then
           local highlight_augroup = vim.api.nvim_create_augroup('kickstart-lsp-highlight', { clear = false })
           vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
             buffer = event.buf,
@@ -196,7 +200,9 @@ return {
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
-      intelephense = {},
+      intelephense = {
+        filetypes = { 'php' },
+      },
       phpactor = {
         filetypes = { 'php' },
         on_attach = function(client)
@@ -223,9 +229,15 @@ return {
           ['language_server_psalm.enabled'] = false,
         },
       },
-      html = {},
-      cssls = {},
-      graphql = {},
+      html = {
+        filetypes = { 'html', 'htmx' },
+      },
+      cssls = {
+        filetypes = { 'css', 'scss', 'less' },
+      },
+      graphql = {
+        filetypes = { 'graphql', 'gql' },
+      },
       emmet_ls = {
         filetypes = { 'css', 'eruby', 'html', 'javascript', 'javascriptreact', 'less', 'sass', 'scss', 'svelte', 'pug', 'typescriptreact', 'vue' },
         init_options = {
@@ -237,10 +249,16 @@ return {
           },
         },
       },
-      tailwindcss = {},
-      yamlls = {},
+      tailwindcss = {
+        filetypes = { 'html', 'css', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'vue', 'svelte' },
+      },
+      yamlls = {
+        filetypes = { 'yaml', 'yml' },
+      },
       gopls = {},
-      bashls = {},
+      bashls = {
+        filetypes = { 'sh', 'bash', 'zsh' },
+      },
       -- clangd = {},
       -- pyright = {},
       -- rust_analyzer = {},
@@ -250,7 +268,9 @@ return {
       --    https://github.com/pmizio/typescript-tools.nvim
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
-      ts_ls = {},
+      ts_ls = {
+        filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
+      },
       --
 
       lua_ls = {
