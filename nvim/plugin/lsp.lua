@@ -63,6 +63,7 @@ vim.api.nvim_create_autocmd(
 			map("grn", vim.lsp.buf.rename, "[R]e[n]ame")
 			map("gca", vim.lsp.buf.code_action, "[G]oto Code [A]ction", { "n", "x" })
 			map("gtD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
+			map("K", vim.lsp.buf.hover, "Hover Documentation")
 
 			-- The following two autocommands are used to highlight references of the
 			-- word under your cursor when your cursor rests there for a little while.
