@@ -42,19 +42,13 @@ require("blink.cmp").setup({
 	signature = { enabled = true },
 	fuzzy = { implementation = "prefer_rust_with_warning" },
 	sources = {
-		default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+		default = { "lsp", "path", "snippets", "buffer" },
 		per_filetype = {
 			sql = { "lsp", "snippets", "buffer" },
-			lua = { "lazydev", "lsp", "path", "snippets", "buffer" },
 		},
 		providers = {
 			lsp = {
 				score_offset = 90,
-			},
-			lazydev = {
-				name = "LazyDev",
-				module = "lazydev.integrations.blink",
-				score_offset = 100,
 			},
 		},
 	},
