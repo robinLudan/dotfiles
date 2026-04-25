@@ -11,16 +11,37 @@ require("mason-lspconfig").setup({})
 require("fidget").setup({})
 require("mason-tool-installer").setup({
 	ensure_installed = {
+		-- formatters
 		"stylua",
 		"prettierd",
+		"prettier",
+		"shfmt",
+		"gofumpt",
+		"goimports",
+		"sqlfmt",
+		"pretty-php",
+
+		-- linters
 		"eslint_d",
+		"markdownlint",
+		"golangci-lint",
+		"yamllint",
+		"jsonlint",
+		"shellcheck",
+
+		-- lsp
 		"lua_ls",
+		"bashls",
 		"tailwindcss-language-server",
 		"ts_ls",
 		"gopls",
 		"sqls",
 		"jsonls",
 		"yamlls",
+		"docker_compose_language_service",
+		"dockerls",
+		"intelephense",
+		"phpactor",
 	},
 	auto_update = false,
 	run_on_start = true,
