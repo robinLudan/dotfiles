@@ -1,10 +1,12 @@
-vim.pack.add({
-	{ src = "https://github.com/nvim-telescope/telescope.nvim", version = "v0.2.2" },
-	{ src = "https://github.com/nvim-telescope/telescope-fzf-native.nvim" },
-	{ src = "https://github.com/nvim-telescope/telescope-ui-select.nvim" },
-	{ src = "https://github.com/nvim-lua/plenary.nvim" },
-	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
-})
+local function ensure_fzf_build()
+	local fzf_native_path = vim.fn.stdpath("data") .. "/site/pack/core/opt/telescope-fzf-native.nvim"
+	local lib_file = fzf_native_path .. "/build/libfzf.so"
+	-- Check if the library exists; if not, try to build it immediately
+	if vim.fn.filereadable(lib_file) == 0 then
+		vim.notify("fzf-native binary missing. Attempting to build...", vim.log.levels.WARN)
+		vim.system({ "make" }, { cwd = fzf_native_path }):wait()
+	end
+end
 
 vim.api.nvim_create_autocmd("PackChanged", {
 	desc = "Build telescope-fzf-native after install/update",
@@ -13,15 +15,28 @@ vim.api.nvim_create_autocmd("PackChanged", {
 		local name, kind = ev.data.spec.name, ev.data.kind
 		if name == "telescope-fzf-native.nvim" and (kind == "install" or kind == "update") then
 			vim.notify("Building telescope-fzf-native...", vim.log.levels.INFO)
-			local obj = vim.system({ "make" }, { cwd = ev.data.path }):wait()
-			if obj.code == 0 then
-				vim.notify("Building telescope-fzf-native done", vim.log.levels.INFO)
-			else
-				vim.notify("Building telescope-fzf-native ", vim.log.levels.ERROR)
-			end
+			vim.system({ "make" }, { cwd = ev.data.path }, function(obj)
+				vim.schedule(function()
+					if obj.code == 0 then
+						vim.notify("fzf-native build complete.", vim.log.levels.INFO)
+					else
+						vim.notify("fzf-native build failed!", vim.log.levels.ERROR)
+					end
+				end)
+			end)
 		end
 	end,
 })
+
+vim.pack.add({
+	{ src = "https://github.com/nvim-telescope/telescope.nvim", version = vim.version.range("v0.*") },
+	{ src = "https://github.com/nvim-telescope/telescope-fzf-native.nvim" },
+	{ src = "https://github.com/nvim-telescope/telescope-ui-select.nvim" },
+	{ src = "https://github.com/nvim-lua/plenary.nvim" },
+	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
+})
+
+ensure_fzf_build()
 
 require("telescope").setup({
 	extensions = {
