@@ -2,6 +2,18 @@
 --  See `:help vim.keymap.set()`
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
+
+local maximized = false
+local function toggle_maximize_or_equalize()
+  if maximized then
+    vim.cmd 'wincmd ='
+  else
+    vim.cmd 'wincmd |'
+    vim.cmd 'wincmd _'
+  end
+  maximized = not maximized
+end
+
 map('i', 'jk', '<ESC>')
 -- split windows
 map('n', '<leader>sv', '<C-w>v', opts)
@@ -28,6 +40,14 @@ vim.diagnostic.config {
 }
 map('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 map('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+
+-- Keybinds to resize windows
+--  Use Alt+<hjkl> to resize windows
+map('n', '<M-h>', '<cmd>vertical resize +5<cr>', { desc = 'Make window bigger vertially' })
+map('n', '<M-l>', '<cmd>vertical resize -5<cr>', { desc = 'Make window smaller vertially' })
+map('n', '<M-j>', '<cmd>horizontal resize +2<cr>', { desc = 'Make window bigger horizontally' })
+map('n', '<M-k>', '<cmd>horizontal resize -2<cr>', { desc = 'Make window smaller horizontally' })
+map('n', '<leader>m', toggle_maximize_or_equalize, { desc = 'Toggle maximize/equalize' })
 
 -- playback macros
 map('n', 'Q', '@qj', opts)
