@@ -19,7 +19,7 @@ require('mason-tool-installer').setup {
     'gofumpt',
     'goimports',
     'sqlfmt',
-    'pretty-php',
+    'pint',
 
     -- linters
     'eslint_d',

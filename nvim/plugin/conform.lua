@@ -10,13 +10,7 @@ require('conform').setup {
   formatters_by_ft = {
     lua = { 'stylua' },
     sh = { 'shfmt' },
-    php = function(bufnr)
-      if require('conform').get_formatter_info('pint', bufnr).available then
-        return { 'pint' }
-      else
-        return { 'pretty-php' }
-      end
-    end,
+    php = { 'pint' },
     vue = { 'prettierd' },
     html = { 'prettierd' },
     css = { 'prettierd' },
@@ -31,10 +25,5 @@ require('conform').setup {
     go = { 'goimports', 'gofumpt' },
     javascriptreact = { 'prettierd' },
     typescriptreact = { 'prettierd' },
-  },
-  formatters = {
-    pint = {
-      command = 'vendor/bin/pint',
-    },
   },
 }
