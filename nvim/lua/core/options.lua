@@ -30,6 +30,7 @@ vim.opt.softtabstop = 2
 vim.opt.smartindent = true
 vim.opt.breakindent = true
 vim.opt.linebreak = true
+vim.opt.winborder = 'rounded'
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
