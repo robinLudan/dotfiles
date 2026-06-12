@@ -8,7 +8,6 @@ vim.pack.add {
 require('luasnip.loaders.from_vscode').lazy_load()
 
 require('blink.cmp').setup {
-  snippets = { preset = 'luasnip' },
   keymap = {
     preset = 'default',
     ['<C-Space>'] = false,
@@ -30,9 +29,7 @@ require('blink.cmp').setup {
         components = {
           kind_icon = {
             text = function(ctx)
-              return require('lspkind').symbolic(ctx.kind, {
-                mode = 'symbol',
-              })
+              return require('lspkind').symbolic(ctx.kind)
             end,
           },
         },
@@ -41,15 +38,8 @@ require('blink.cmp').setup {
   },
   signature = { enabled = true },
   fuzzy = { implementation = 'prefer_rust_with_warning' },
+  snippets = { preset = 'luasnip' },
   sources = {
     default = { 'lsp', 'path', 'snippets', 'buffer' },
-    per_filetype = {
-      sql = { 'lsp', 'snippets', 'buffer' },
-    },
-    providers = {
-      lsp = {
-        score_offset = 90,
-      },
-    },
   },
 }
