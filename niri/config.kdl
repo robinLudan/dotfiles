@@ -379,9 +379,9 @@ window-rule {
 
 // Make the wallpaper stationary, rather than moving with workspaces.
 layer-rule {
-    // This is for swww; change for other wallpaper tools.
+    // This is for swaybg; change for other wallpaper tools.
     // Find the right namespace by running niri msg layers.
-    match namespace="^swww-daemon$"
+    match namespace="^wallpaper$"
     place-within-backdrop true
 }
 
