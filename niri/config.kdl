@@ -373,6 +373,7 @@ window-rule {
 
 window-rule {
     match app-id="mpv"
+    match app-id="steam"
     open-fullscreen true
 }
 
