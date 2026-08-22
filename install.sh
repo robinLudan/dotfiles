@@ -3,7 +3,7 @@
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Apps
-Apps=('niri' 'nvim' 'foot' 'fastfetch' 'tmux')
+Apps=('niri' 'noctalia' 'nvim' 'foot' 'fastfetch' 'tmux')
 
 # Zsh aliases
 ln -sf "$DOTFILES/zsh/aliases" "$HOME/.bash_aliases"
