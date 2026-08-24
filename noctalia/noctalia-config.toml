@@ -62,6 +62,10 @@ behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
     enabled = true
     timeout = 400.0
 
+[keybinds]
+down = [ "Down", "Ctrl+n" ]
+up = [ "Up", "Ctrl+p" ]
+
 [lockscreen]
 blur_intensity = 0.19999999552965164
 blurred_desktop = true
