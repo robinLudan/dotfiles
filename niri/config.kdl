@@ -464,7 +464,7 @@ binds {
 
     xf86Launch1  { spawn "rog-control-center"; } // rog control center
     xf86Launch3  { spawn-sh "asusctl led-mode -n"; } // switch between keyboard aura profiles
-    xf86Launch4  { spawn-sh "asusctl profile -n"; } // switch between fan profiles
+    xf86Launch4  { spawn-sh "noctalia msg power-cycle"; } // switch between fan profiles
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
