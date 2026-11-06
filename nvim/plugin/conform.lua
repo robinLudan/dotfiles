@@ -8,6 +8,7 @@ require('conform').setup {
     lsp_format = 'fallback',
   },
   formatters_by_ft = {
+    sql = { 'pg_format' },
     lua = { 'stylua' },
     sh = { 'shfmt' },
     php = { 'pint' },

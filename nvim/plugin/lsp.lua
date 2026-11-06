@@ -18,7 +18,7 @@ require('mason-tool-installer').setup {
     'shfmt',
     'gofumpt',
     'goimports',
-    'sqlfmt',
+    'pgformatter',
     'pint',
 
     -- linters
