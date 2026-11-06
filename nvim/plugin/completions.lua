@@ -23,8 +23,7 @@ require('blink.cmp').setup {
       border = 'rounded',
       draw = {
         columns = {
-          { 'kind_icon', 'label', gap = 1 },
-          { 'kind' },
+          { 'kind_icon', 'label', 'label_description', gap = 1 },
         },
         components = {
           kind_icon = {
